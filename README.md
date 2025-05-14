@@ -1,13 +1,14 @@
-My llvm libc contributions.
-i pair programmed with the maintainer. but did all the coding and initial
-research and implementation although the libc maintainer already knew all
-this.
+My llvm (libc) journey so far:
 
-i learned a lot for example for some i had to debug the program at the level
-of literal bits :-)
+* Worked closely with the Google LLVM libc math maintainer and developed and tested floating point math functions
+  - Independently developed 40 floating point math functions, increasing Basic Operations coverage by x percent. The pull request consisted of a 3500 line and 110 files change.
+  - Developed `fmul` for double precision, with the guidance of the maintainer, by researching the problem, and applying my existing systems knowledge.
+  - Co-authored: conducted performance benchmark analysis and carried out the programming that led to around 7x performance improvement of fmul
+  - Interacted with the system at the level of bits and became familiar with hexadecimal.
+* Continuously applied and grew my understanding of floating point math and C++.
+* Added proxy headers enabling a smoother build process for llvm libc.
+* Developed software that will be run millions of times in Linux, MacOS and embedded tool chains, e.g., ARM.
 
-i want to get better though and master this since this is the hardest thing
-ive done in programming.
 
 ```
 commit a205a854e06d36c1d0def3e3bc3743defdb6abc1
