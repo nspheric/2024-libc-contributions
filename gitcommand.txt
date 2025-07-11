@@ -1,0 +1,13 @@
+# command to get all the git commits of a given user. future reminder for myself.
+
+## get all the authors in a given git history
+* git shortlog -sn --all
+
+## count all the authors
+* git shortlog -sn --all | wc -l
+
+## pipe authors into a text file to search for a given email
+* git shortlog -sn --all > <name>.txt
+
+## get all the commits of a given author
+* git log --author=USERNAME --oneline --color=never | awk '{print $1}' | xargs git show > <name>.txt
